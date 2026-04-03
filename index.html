@@ -116,31 +116,6 @@
       opacity: 0.95;
     }
 
-    /* ================= BLOQUEAR MOVIMENTO ================= */
-html, body {
-  height: 100%;
-  overflow: hidden; /* remove scroll */
-}
-
-/* ================= FIXAR LAYOUT ================= */
-.wrap {
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* ================= FORM FIXO ================= */
-.card {
-  height: calc(100vh - 80px); /* altura da topbar */
-  overflow: hidden;
-}
-
-/* ================= CONTEÚDO INTERNO CONTROLADO ================= */
-.section {
-  height: 100%;
-  overflow-y: auto; /* scroll só dentro do formulário se necessário */
-  padding-bottom: 20px;
-}
-
    /* POPUP */
 .overlay {
   position: fixed;
@@ -308,6 +283,32 @@ html, body {
 .wrap {
   min-height: 100vh;
 }
+
+      /* ================= BLOQUEAR MOVIMENTO ================= */
+html, body {
+  height: 100%;
+  overflow: hidden; /* remove scroll */
+}
+
+/* ================= FIXAR LAYOUT ================= */
+.wrap {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ================= FORM FIXO ================= */
+.card {
+  height: calc(100vh - 80px); /* altura da topbar */
+  overflow: hidden;
+}
+
+/* ================= CONTEÚDO INTERNO CONTROLADO ================= */
+.section {
+  height: 100%;
+  overflow-y: auto; /* scroll só dentro do formulário se necessário */
+  padding-bottom: 20px;
+}
+
     
   </style>
 </head>
