@@ -6,115 +6,144 @@
   <title>Marketplace Checkout</title>
 
   <style>
-    /* ================= CSS ================= */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  /* ================= CSS ================= */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-    body {
-      background: #f5f5f5;
-      color: #222;
-    }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
-    .wrap {
-      max-width: 480px;
-      margin: 0 auto;
-      min-height: 100vh;
-      background: #fff;
-    }
+  body {
+    background: #f5f5f5;
+    color: #222;
+    position: fixed;
+    inset: 0;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
+  }
 
-    .topbar {
-      background: #fff;
-      border-bottom: 1px solid #e6e6e6;
-      padding: 18px 14px 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .wrap {
+    width: 100%;
+    max-width: 480px;
+    height: 100dvh;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
 
-    .logo-img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
+  .topbar {
+    flex: 0 0 auto;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 18px 14px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .card {
-      background: #fff;
-    }
+  .logo-img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 
-    .title {
-      text-align: center;
-      padding: 18px;
-      font-weight: 700;
-      font-size: 18px;
-      border-bottom: 1px solid #eee;
-      color: #1f2a37;
-    }
+  .card {
+    flex: 1 1 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
 
-    .section {
-      padding: 16px;
-    }
+  .title {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 18px;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    color: #1f2a37;
+  }
 
-    .field {
-      margin-bottom: 14px;
-    }
+  .section {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+  }
 
-    .field label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #222;
-    }
+  .field {
+    margin-bottom: 14px;
+  }
 
-    .field label.muted {
-      color: #9a9a9a;
-    }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+  }
 
-    .field input,
-    .field select {
-      width: 100%;
-      height: 42px;
-      border: 1px solid #ddd;
-      border-radius: 3px;
-      padding: 0 12px;
-      font-size: 14px;
-      background: #fff;
-      color: #333;
-      outline: none;
-    }
+  .field label.muted {
+    color: #9a9a9a;
+  }
 
-    .field input::placeholder {
-      color: #9a9a9a;
-    }
+  .field input,
+  .field select {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 12px;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+  .field input::placeholder {
+    color: #9a9a9a;
+  }
 
-    .save-btn {
-      width: 100%;
-      height: 48px;
-      background: #38c202;
-      color: #fff;
-      border: none;
-      border-radius: 24px;
-      font-weight: 700;
-      font-size: 15px;
-      cursor: pointer;
-      margin-top: 6px;
-    }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 
-    .save-btn:hover,
-    .pay-btn:hover {
-      opacity: 0.95;
-    }
+  .save-btn {
+    width: 100%;
+    height: 48px;
+    background: #38c202;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 6px;
+    flex: 0 0 auto;
+  }
+
+  .save-btn:hover,
+  .pay-btn:hover {
+    opacity: 0.95;
+  }
 
    /* POPUP */
 .overlay {
